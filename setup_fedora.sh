@@ -47,5 +47,9 @@ sudo dnf install libdvdcss -y
 sudo dnf install rpmfusion-nonfree-release-tainted -y
 sudo dnf --repo=rpmfusion-nonfree-tainted install "*-firmware" -y
 
+# install tailscale
+curl -fsSL https://tailscale.com/install.sh | sh
+
+
 # change standardshell to zsh
 chsh -s $(which zsh)
