@@ -18,7 +18,7 @@ dnf check-update
 sudo dnf install code -y
 
 ## Install essential tools
-sudo dnf install rclone tldr mpv nvim tmux alacritty vim nvim zsh stow yt-dlp vlc unison gnome-tweaks gtk-murrine-engine gh pass -y
+sudo dnf install rclone tldr mpv nvim cmus tmux alacritty vim nvim zsh stow yt-dlp vlc unison gnome-tweaks gtk-murrine-engine gh pass -y
 
 ## Install steam
 sudo dnf install steam -y
@@ -33,6 +33,12 @@ git config --global core.editor "nvim"
 sudo dnf install syncthing -y
 systemctl --user enable syncthing.service
 systemctl --user start syncthing.service
+
+## install yubikey-programs
+sudo dnf install --skip-unavailable \
+    wget gnupg2 \
+    cryptsetup gnupg2-scdaemon pcsc-lite \
+    yubikey-personalization-gui yubikey-manager
 
 # install and setup additional codecs, fw and hw-acceleration for amd
 # see https://rpmfusion.org/Howto/Multimedia
