@@ -18,7 +18,9 @@ dnf check-update
 sudo dnf install code -y
 
 ## Install essential tools
-sudo dnf install rclone tldr mpv nvim cmus tmux alacritty vim nvim zsh stow yt-dlp vlc unison gnome-tweaks gtk-murrine-engine gh pass -y
+sudo dnf install rclone tldr mpv nvim cmus tmux alacritty vim nvim zsh stow yt-dlp 
+     \ vlc unison gnome-tweaks gtk-murrine-engine gh pass
+     \ fastfetch mc -y
 
 ## Install steam
 sudo dnf install steam -y
@@ -35,7 +37,7 @@ systemctl --user enable syncthing.service
 systemctl --user start syncthing.service
 
 ## install yubikey-programs
-sudo dnf install --skip-unavailable \
+sudo dnf install --skip-unavailable c
     wget gnupg2 \
     cryptsetup gnupg2-scdaemon pcsc-lite \
     yubikey-personalization-gui yubikey-manager
